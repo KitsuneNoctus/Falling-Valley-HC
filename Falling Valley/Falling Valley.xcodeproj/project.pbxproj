@@ -16,6 +16,8 @@
 		3F4FD28C2600663500C350E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4FD28B2600663500C350E0 /* Assets.xcassets */; };
 		3F4FD2972600663500C350E0 /* Falling_ValleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2962600663500C350E0 /* Falling_ValleyTests.swift */; };
 		3F4FD2A22600663500C350E0 /* Falling_ValleyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2A12600663500C350E0 /* Falling_ValleyUITests.swift */; };
+		3F4FD2BD26006CA200C350E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2BC26006CA200C350E0 /* HomeViewController.swift */; };
+		3F4FD2C626006D1300C350E0 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2C526006D1300C350E0 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		3F4FD29D2600663500C350E0 /* Falling ValleyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Falling ValleyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4FD2A12600663500C350E0 /* Falling_ValleyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Falling_ValleyUITests.swift; sourceTree = "<group>"; };
 		3F4FD2A32600663500C350E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4FD2BC26006CA200C350E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3F4FD2C526006D1300C350E0 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,14 @@
 		3F4FD27D2600663100C350E0 /* Falling Valley */ = {
 			isa = PBXGroup;
 			children = (
+				3F4FD2C426006CF900C350E0 /* Scenes */,
+				3F4FD2BB26006C7C00C350E0 /* View Controllers */,
+				3F4FD2B726006C2500C350E0 /* Sounds */,
+				3F4FD2B626006C1D00C350E0 /* Sprites */,
+				3F4FD2B526006C1500C350E0 /* Physics */,
 				3F4FD27E2600663100C350E0 /* AppDelegate.swift */,
 				3F4FD2802600663100C350E0 /* GameScene.sks */,
 				3F4FD2822600663100C350E0 /* Actions.sks */,
-				3F4FD2842600663100C350E0 /* GameScene.swift */,
-				3F4FD2862600663100C350E0 /* GameViewController.swift */,
 				3F4FD2882600663100C350E0 /* Main.storyboard */,
 				3F4FD28B2600663500C350E0 /* Assets.xcassets */,
 				3F4FD28D2600663500C350E0 /* Info.plist */,
@@ -129,6 +136,45 @@
 				3F4FD2A32600663500C350E0 /* Info.plist */,
 			);
 			path = "Falling ValleyUITests";
+			sourceTree = "<group>";
+		};
+		3F4FD2B526006C1500C350E0 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
+		3F4FD2B626006C1D00C350E0 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sprites;
+			sourceTree = "<group>";
+		};
+		3F4FD2B726006C2500C350E0 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		3F4FD2BB26006C7C00C350E0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F4FD2862600663100C350E0 /* GameViewController.swift */,
+				3F4FD2BC26006CA200C350E0 /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3F4FD2C426006CF900C350E0 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3F4FD2842600663100C350E0 /* GameScene.swift */,
+				3F4FD2C526006D1300C350E0 /* GameOverScene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +308,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4FD2C626006D1300C350E0 /* GameOverScene.swift in Sources */,
 				3F4FD2852600663100C350E0 /* GameScene.swift in Sources */,
 				3F4FD2872600663100C350E0 /* GameViewController.swift in Sources */,
 				3F4FD27F2600663100C350E0 /* AppDelegate.swift in Sources */,
+				3F4FD2BD26006CA200C350E0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
