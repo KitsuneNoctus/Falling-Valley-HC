@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F4FD27F2600663100C350E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD27E2600663100C350E0 /* AppDelegate.swift */; };
+		3F4FD2812600663100C350E0 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F4FD2802600663100C350E0 /* GameScene.sks */; };
+		3F4FD2832600663100C350E0 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F4FD2822600663100C350E0 /* Actions.sks */; };
+		3F4FD2852600663100C350E0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2842600663100C350E0 /* GameScene.swift */; };
+		3F4FD2872600663100C350E0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2862600663100C350E0 /* GameViewController.swift */; };
+		3F4FD28A2600663100C350E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4FD2882600663100C350E0 /* Main.storyboard */; };
+		3F4FD28C2600663500C350E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4FD28B2600663500C350E0 /* Assets.xcassets */; };
+		3F4FD2972600663500C350E0 /* Falling_ValleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2962600663500C350E0 /* Falling_ValleyTests.swift */; };
+		3F4FD2A22600663500C350E0 /* Falling_ValleyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2A12600663500C350E0 /* Falling_ValleyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F4FD2932600663500C350E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F4FD2732600663100C350E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F4FD27A2600663100C350E0;
+			remoteInfo = "Falling Valley";
+		};
+		3F4FD29E2600663500C350E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F4FD2732600663100C350E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F4FD27A2600663100C350E0;
+			remoteInfo = "Falling Valley";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F4FD27B2600663100C350E0 /* Falling Valley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Falling Valley.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F4FD27E2600663100C350E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F4FD2802600663100C350E0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		3F4FD2822600663100C350E0 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		3F4FD2842600663100C350E0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		3F4FD2862600663100C350E0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		3F4FD2892600663100C350E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F4FD28B2600663500C350E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F4FD28D2600663500C350E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4FD2922600663500C350E0 /* Falling ValleyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Falling ValleyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F4FD2962600663500C350E0 /* Falling_ValleyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Falling_ValleyTests.swift; sourceTree = "<group>"; };
+		3F4FD2982600663500C350E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4FD29D2600663500C350E0 /* Falling ValleyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Falling ValleyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F4FD2A12600663500C350E0 /* Falling_ValleyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Falling_ValleyUITests.swift; sourceTree = "<group>"; };
+		3F4FD2A32600663500C350E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F4FD2782600663100C350E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4FD28F2600663500C350E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4FD29A2600663500C350E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F4FD2722600663100C350E0 = {
+			isa = PBXGroup;
+			children = (
+				3F4FD27D2600663100C350E0 /* Falling Valley */,
+				3F4FD2952600663500C350E0 /* Falling ValleyTests */,
+				3F4FD2A02600663500C350E0 /* Falling ValleyUITests */,
+				3F4FD27C2600663100C350E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F4FD27C2600663100C350E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F4FD27B2600663100C350E0 /* Falling Valley.app */,
+				3F4FD2922600663500C350E0 /* Falling ValleyTests.xctest */,
+				3F4FD29D2600663500C350E0 /* Falling ValleyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F4FD27D2600663100C350E0 /* Falling Valley */ = {
+			isa = PBXGroup;
+			children = (
+				3F4FD27E2600663100C350E0 /* AppDelegate.swift */,
+				3F4FD2802600663100C350E0 /* GameScene.sks */,
+				3F4FD2822600663100C350E0 /* Actions.sks */,
+				3F4FD2842600663100C350E0 /* GameScene.swift */,
+				3F4FD2862600663100C350E0 /* GameViewController.swift */,
+				3F4FD2882600663100C350E0 /* Main.storyboard */,
+				3F4FD28B2600663500C350E0 /* Assets.xcassets */,
+				3F4FD28D2600663500C350E0 /* Info.plist */,
+			);
+			path = "Falling Valley";
+			sourceTree = "<group>";
+		};
+		3F4FD2952600663500C350E0 /* Falling ValleyTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F4FD2962600663500C350E0 /* Falling_ValleyTests.swift */,
+				3F4FD2982600663500C350E0 /* Info.plist */,
+			);
+			path = "Falling ValleyTests";
+			sourceTree = "<group>";
+		};
+		3F4FD2A02600663500C350E0 /* Falling ValleyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F4FD2A12600663500C350E0 /* Falling_ValleyUITests.swift */,
+				3F4FD2A32600663500C350E0 /* Info.plist */,
+			);
+			path = "Falling ValleyUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F4FD27A2600663100C350E0 /* Falling Valley */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F4FD2A62600663500C350E0 /* Build configuration list for PBXNativeTarget "Falling Valley" */;
+			buildPhases = (
+				3F4FD2772600663100C350E0 /* Sources */,
+				3F4FD2782600663100C350E0 /* Frameworks */,
+				3F4FD2792600663100C350E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Falling Valley";
+			productName = "Falling Valley";
+			productReference = 3F4FD27B2600663100C350E0 /* Falling Valley.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F4FD2912600663500C350E0 /* Falling ValleyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F4FD2A92600663500C350E0 /* Build configuration list for PBXNativeTarget "Falling ValleyTests" */;
+			buildPhases = (
+				3F4FD28E2600663500C350E0 /* Sources */,
+				3F4FD28F2600663500C350E0 /* Frameworks */,
+				3F4FD2902600663500C350E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F4FD2942600663500C350E0 /* PBXTargetDependency */,
+			);
+			name = "Falling ValleyTests";
+			productName = "Falling ValleyTests";
+			productReference = 3F4FD2922600663500C350E0 /* Falling ValleyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F4FD29C2600663500C350E0 /* Falling ValleyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F4FD2AC2600663500C350E0 /* Build configuration list for PBXNativeTarget "Falling ValleyUITests" */;
+			buildPhases = (
+				3F4FD2992600663500C350E0 /* Sources */,
+				3F4FD29A2600663500C350E0 /* Frameworks */,
+				3F4FD29B2600663500C350E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F4FD29F2600663500C350E0 /* PBXTargetDependency */,
+			);
+			name = "Falling ValleyUITests";
+			productName = "Falling ValleyUITests";
+			productReference = 3F4FD29D2600663500C350E0 /* Falling ValleyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F4FD2732600663100C350E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3F4FD27A2600663100C350E0 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3F4FD2912600663500C350E0 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3F4FD27A2600663100C350E0;
+					};
+					3F4FD29C2600663500C350E0 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3F4FD27A2600663100C350E0;
+					};
+				};
+			};
+			buildConfigurationList = 3F4FD2762600663100C350E0 /* Build configuration list for PBXProject "Falling Valley" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F4FD2722600663100C350E0;
+			productRefGroup = 3F4FD27C2600663100C350E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F4FD27A2600663100C350E0 /* Falling Valley */,
+				3F4FD2912600663500C350E0 /* Falling ValleyTests */,
+				3F4FD29C2600663500C350E0 /* Falling ValleyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F4FD2792600663100C350E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F4FD28A2600663100C350E0 /* Main.storyboard in Resources */,
+				3F4FD2812600663100C350E0 /* GameScene.sks in Resources */,
+				3F4FD28C2600663500C350E0 /* Assets.xcassets in Resources */,
+				3F4FD2832600663100C350E0 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4FD2902600663500C350E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4FD29B2600663500C350E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F4FD2772600663100C350E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F4FD2852600663100C350E0 /* GameScene.swift in Sources */,
+				3F4FD2872600663100C350E0 /* GameViewController.swift in Sources */,
+				3F4FD27F2600663100C350E0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4FD28E2600663500C350E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F4FD2972600663500C350E0 /* Falling_ValleyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4FD2992600663500C350E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F4FD2A22600663500C350E0 /* Falling_ValleyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F4FD2942600663500C350E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F4FD27A2600663100C350E0 /* Falling Valley */;
+			targetProxy = 3F4FD2932600663500C350E0 /* PBXContainerItemProxy */;
+		};
+		3F4FD29F2600663500C350E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F4FD27A2600663100C350E0 /* Falling Valley */;
+			targetProxy = 3F4FD29E2600663500C350E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F4FD2882600663100C350E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F4FD2892600663100C350E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F4FD2A42600663500C350E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F4FD2A52600663500C350E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F4FD2A72600663500C350E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VH946FT2M;
+				INFOPLIST_FILE = "Falling Valley/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.henrycalderon.Falling-Valley";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F4FD2A82600663500C350E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VH946FT2M;
+				INFOPLIST_FILE = "Falling Valley/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.henrycalderon.Falling-Valley";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3F4FD2AA2600663500C350E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VH946FT2M;
+				INFOPLIST_FILE = "Falling ValleyTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.henrycalderon.Falling-ValleyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Falling Valley.app/Falling Valley";
+			};
+			name = Debug;
+		};
+		3F4FD2AB2600663500C350E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VH946FT2M;
+				INFOPLIST_FILE = "Falling ValleyTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.henrycalderon.Falling-ValleyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Falling Valley.app/Falling Valley";
+			};
+			name = Release;
+		};
+		3F4FD2AD2600663500C350E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VH946FT2M;
+				INFOPLIST_FILE = "Falling ValleyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.henrycalderon.Falling-ValleyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Falling Valley";
+			};
+			name = Debug;
+		};
+		3F4FD2AE2600663500C350E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VH946FT2M;
+				INFOPLIST_FILE = "Falling ValleyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.henrycalderon.Falling-ValleyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Falling Valley";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F4FD2762600663100C350E0 /* Build configuration list for PBXProject "Falling Valley" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F4FD2A42600663500C350E0 /* Debug */,
+				3F4FD2A52600663500C350E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F4FD2A62600663500C350E0 /* Build configuration list for PBXNativeTarget "Falling Valley" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F4FD2A72600663500C350E0 /* Debug */,
+				3F4FD2A82600663500C350E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F4FD2A92600663500C350E0 /* Build configuration list for PBXNativeTarget "Falling ValleyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F4FD2AA2600663500C350E0 /* Debug */,
+				3F4FD2AB2600663500C350E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F4FD2AC2600663500C350E0 /* Build configuration list for PBXNativeTarget "Falling ValleyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F4FD2AD2600663500C350E0 /* Debug */,
+				3F4FD2AE2600663500C350E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F4FD2732600663100C350E0 /* Project object */;
+}
