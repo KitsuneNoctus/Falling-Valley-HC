@@ -18,6 +18,7 @@
 		3F4FD2A22600663500C350E0 /* Falling_ValleyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2A12600663500C350E0 /* Falling_ValleyUITests.swift */; };
 		3F4FD2BD26006CA200C350E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2BC26006CA200C350E0 /* HomeViewController.swift */; };
 		3F4FD2C626006D1300C350E0 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2C526006D1300C350E0 /* GameOverScene.swift */; };
+		3F4FD2CB26006D8F00C350E0 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD2CA26006D8F00C350E0 /* CharacterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3F4FD2A32600663500C350E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F4FD2BC26006CA200C350E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3F4FD2C526006D1300C350E0 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		3F4FD2CA26006D8F00C350E0 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			children = (
 				3F4FD2862600663100C350E0 /* GameViewController.swift */,
 				3F4FD2BC26006CA200C350E0 /* HomeViewController.swift */,
+				3F4FD2CA26006D8F00C350E0 /* CharacterViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4FD2CB26006D8F00C350E0 /* CharacterViewController.swift in Sources */,
 				3F4FD2C626006D1300C350E0 /* GameOverScene.swift in Sources */,
 				3F4FD2852600663100C350E0 /* GameScene.swift in Sources */,
 				3F4FD2872600663100C350E0 /* GameViewController.swift in Sources */,
