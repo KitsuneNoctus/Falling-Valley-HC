@@ -42,6 +42,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.gravity = CGVector(dx: 0, dy: -0.5)
         
         createPlayer()
+        spawnRocks()
     }
     
     //MARK: Update
@@ -69,7 +70,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func spawnRocks(){
-        
+        var randomTime:Double = 5.0
+        let generateTime = SKAction.run {
+            randomTime = Double.random(in: 1...5)
+        }
+        let wait = SKAction.wait(forDuration: randomTime)
+        let createObject = SKAction.run{
+            self.creatRock()
+        }
+        let objects = SKAction.sequence([generateTime,wait,createObject])
+        let showerObjects = SKAction.repeatForever(objects)
+        self.run(showerObjects)
+    }
+    
+    func creatRock(){
+        let rock = Rock()
+        rock.placeRock(scene: self)
+        rock.zPosition = 2
+        self.addChild(rock)
     }
     
     
