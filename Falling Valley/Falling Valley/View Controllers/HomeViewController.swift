@@ -8,57 +8,19 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Falling Valley"
-        return label
-    }()
-    
-    let playButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    let characterButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    let settingsButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    let vStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.spacing = 20
-        stack.axis = .vertical
-        return stack
-    }()
+    @IBOutlet weak var playButton: UIButton!
     
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+//        setupView()
+    }
+    @IBAction func pressPlay(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "gameViewController") as! GameViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
     
-    //MARK: Setup
-    func setupView(){
-        self.view.addSubview(titleLabel)
-        self.view.addSubview(vStack)
-        self.vStack.addArrangedSubview(playButton)
-        self.vStack.addArrangedSubview(characterButton)
-        self.vStack.addArrangedSubview(settingsButton)
-        
-        NSLayoutConstraint.activate([
-            
-        ])
-    }
     
 }
