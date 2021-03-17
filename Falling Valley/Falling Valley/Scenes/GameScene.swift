@@ -41,6 +41,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //MARK: Update
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        
+        let playerVelocityY = player.physicsBody?.velocity.dy ?? 0
+        if playerVelocityY > 100{
+            player.physicsBody?.velocity.dy = 100
+        }
+        
+        if playerVelocityY < -110{
+            player.physicsBody?.velocity.dy = -110
+        }
+        
+        // Update Timer
+        sinceTouch += fixedDelta
     }
     
     //MARK: Creation
