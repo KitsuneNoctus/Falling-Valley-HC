@@ -22,7 +22,8 @@ class Rock: SKSpriteNode {
         self.physicsBody?.linearDamping = 0
         self.physicsBody?.friction = 0
         self.physicsBody?.categoryBitMask = PhysicsCategory.Obstacle
-//        self.physicsBody?.collisionBitMask =
+        self.physicsBody?.collisionBitMask = PhysicsCategory.Climber
+        self.physicsBody?.contactTestBitMask = PhysicsCategory.Climber
     }
     
     required init?(coder aDecoder: NSCoder) {

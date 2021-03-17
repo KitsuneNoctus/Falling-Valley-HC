@@ -131,4 +131,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
+    
+    //MARK: Physics Collision
+    func didBegin(_ contact: SKPhysicsContact) {
+        let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        
+        if collision == PhysicsCategory.Climber | PhysicsCategory.Obstacle{
+            print("Collision occurred - end game")
+            gameOver()
+        }
+    }
+    
+    //MARK: Game Over
+    func gameOver(){
+        let gameOverScene = GameOverScene(size: (self.view?.bounds.size)!)
+        gameOverScene.scaleMode = .aspectFill
+        let crossFade = SKTransition.crossFade(withDuration: 0.75)
+        view?.presentScene(gameOverScene, transition: crossFade)
+    }
 }
