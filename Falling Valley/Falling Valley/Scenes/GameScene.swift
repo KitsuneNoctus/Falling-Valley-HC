@@ -26,6 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: Did Move
     override func didMove(to view: SKView) {
+        self.backgroundColor = UIColor(named: "skyColor") ?? .blue
         
         /// Swipe Right
         let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipedRight(sender:)))

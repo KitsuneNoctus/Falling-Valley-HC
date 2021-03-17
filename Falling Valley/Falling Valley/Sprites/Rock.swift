@@ -31,9 +31,9 @@ class Rock: SKSpriteNode {
     
     func placeRock(scene: SKScene){
         if let view = scene.view{
-            let pos1 = CGPoint(x: view.bounds.width, y: view.bounds.height+30)
-            let pos2 = CGPoint(x: view.bounds.width/2, y: view.bounds.height+30)
-            let pos3 = CGPoint(x: 0, y: view.bounds.height+30)
+            let pos1 = CGPoint(x: view.bounds.width, y: view.bounds.height+self.size.height)
+            let pos2 = CGPoint(x: view.bounds.width/2, y: view.bounds.height+self.size.height)
+            let pos3 = CGPoint(x: 0, y: view.bounds.height+self.size.height)
             let positions = [pos1,pos2,pos3]
             
             self.position = positions.randomElement()!
