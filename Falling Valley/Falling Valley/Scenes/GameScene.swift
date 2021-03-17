@@ -77,10 +77,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     @objc func swipedRight(sender:UISwipeGestureRecognizer){
         print("swiped right")
+        let moveRight = SKAction.move(to: CGPoint(x: self.frame.width - (player.size.width/2), y: player.position.y), duration: 2)
+        player.run(SKAction.sequence([moveRight]))
     }
     
     @objc func swipedLeft(sender:UISwipeGestureRecognizer){
-        print("swiped left")
+        print("Swiped left")
+        let moveLeft = SKAction.move(to: CGPoint(x: 0 + (player.size.width/2), y: player.position.y), duration: 2)
+        player.run(SKAction.sequence([moveLeft]))
     }
     
     func touchDown(atPoint pos : CGPoint) {
