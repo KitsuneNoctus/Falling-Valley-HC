@@ -13,7 +13,7 @@ class Climber: SKSpriteNode {
 
     //MARK: Init
     init(){
-        let square = SKTexture(imageNamed: "filler")
+        let square = SKTexture(imageNamed: "climberCharacter")
         let size = CGSize(width: 30, height: 30)
         super.init(texture: square, color: .clear, size: size)
 

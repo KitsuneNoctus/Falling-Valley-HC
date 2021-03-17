@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "filler.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "climberCharacter.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
