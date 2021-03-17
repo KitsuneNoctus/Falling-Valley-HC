@@ -29,11 +29,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDr-Og-sQB">
-                                <rect key="frame" x="67" y="228" width="264" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDr-Og-sQB">
+                                <rect key="frame" x="63" y="241.5" width="288" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Play" backgroundImage="clouds">
+                                <state key="normal" title="Play">
                                     <color key="titleColor" red="0.0" green="0.067360184350000005" blue="0.27837597149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -45,13 +44,16 @@
                         <color key="backgroundColor" name="skyColor"/>
                         <constraints>
                             <constraint firstItem="K0p-hd-8hB" firstAttribute="centerX" secondItem="mG6-aP-CYm" secondAttribute="centerX" id="8h0-Ay-f2v"/>
+                            <constraint firstItem="lDr-Og-sQB" firstAttribute="leading" secondItem="Olo-4N-f1P" secondAttribute="trailing" constant="30" id="EIp-V8-CEM"/>
                             <constraint firstAttribute="bottom" secondItem="Olo-4N-f1P" secondAttribute="bottom" id="FzW-Pm-E4C"/>
                             <constraint firstAttribute="trailing" secondItem="2XT-JN-2Wl" secondAttribute="trailing" constant="-35" id="P7v-Ga-6G4"/>
+                            <constraint firstItem="lDr-Og-sQB" firstAttribute="top" secondItem="K0p-hd-8hB" secondAttribute="bottom" constant="45" id="UaW-Rn-hsm"/>
                             <constraint firstAttribute="bottom" secondItem="2XT-JN-2Wl" secondAttribute="bottom" id="aPM-0W-fx5"/>
                             <constraint firstItem="Olo-4N-f1P" firstAttribute="leading" secondItem="mG6-aP-CYm" secondAttribute="leading" constant="-35" id="bf5-4V-9gl"/>
                             <constraint firstItem="Olo-4N-f1P" firstAttribute="top" secondItem="mG6-aP-CYm" secondAttribute="top" id="cAP-Fb-ZGs"/>
                             <constraint firstItem="2XT-JN-2Wl" firstAttribute="top" secondItem="mG6-aP-CYm" secondAttribute="top" id="eK1-yC-AzH"/>
                             <constraint firstItem="K0p-hd-8hB" firstAttribute="top" secondItem="e7w-iB-mLv" secondAttribute="top" constant="75" id="uxE-Xt-8wO"/>
+                            <constraint firstItem="2XT-JN-2Wl" firstAttribute="leading" secondItem="lDr-Og-sQB" secondAttribute="trailing" constant="30" id="ybh-3N-Xho"/>
                         </constraints>
                     </view>
                     <connections>
@@ -79,7 +81,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clouds" width="525" height="262.5"/>
         <image name="leftWall" width="67.5" height="292.5"/>
         <image name="rightWall" width="67.5" height="292.5"/>
         <namedColor name="skyColor">
