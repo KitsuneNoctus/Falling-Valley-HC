@@ -84,7 +84,7 @@
         <image name="leftWall" width="67.5" height="292.5"/>
         <image name="rightWall" width="67.5" height="292.5"/>
         <namedColor name="skyColor">
-            <color red="0.63728155604928793" green="0.97415320439338915" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63700002431869507" green="0.97399997711181641" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

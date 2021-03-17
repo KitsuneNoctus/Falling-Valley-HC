@@ -16,6 +16,7 @@ class Climber: SKSpriteNode {
         let square = SKTexture(imageNamed: "climberCharacter")
         let size = CGSize(width: 45, height: 45)
         super.init(texture: square, color: .clear, size: size)
+        self.zPosition = 3
 
         self.physicsBody = SKPhysicsBody(rectangleOf: size)
         self.physicsBody?.isDynamic = true

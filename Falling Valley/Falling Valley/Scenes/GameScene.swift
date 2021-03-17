@@ -42,6 +42,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: -0.5)
         
+        generateRope()
         createPlayer()
         spawnRocks()
     }
@@ -89,6 +90,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         rock.placeRock(scene: self)
         rock.zPosition = 2
         self.addChild(rock)
+    }
+    
+    func generateRope(){
+        let rope = Rope(scene: self)
+        rope.position = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
+        self.addChild(rope)
     }
     
     

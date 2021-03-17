@@ -46,15 +46,15 @@ class GameOverScene: SKScene {
     
     //MARK: Buttons
     func createButton(){
-//        let buttonTexture = SKTexture(imageNamed: "playAgain")
+        let buttonTexture = SKTexture(imageNamed: "playAgain")
         
-        
-//        let button = ButtonNode(normalTexture: buttonTexture, selectedTexture: buttonTexture, disabledTexture: buttonTexture)
-//        button.setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(GameOverScene.playAgain))
-//        button.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-//        button.zPosition = 20
-//        button.name = "button"
-//        self.addChild(button)
+        let button = ButtonNode(normalTexture: buttonTexture, selectedTexture: buttonTexture, disabledTexture: buttonTexture)
+        button.setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(GameOverScene.playAgain))
+        button.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        button.size.height = 200
+        button.zPosition = 20
+        button.name = "button"
+        self.addChild(button)
     }
     
     @objc func playAgain(){

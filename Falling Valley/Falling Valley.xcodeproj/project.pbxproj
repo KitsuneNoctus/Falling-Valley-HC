@@ -22,6 +22,10 @@
 		3F68771626008917008F2828 /* Climber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68771526008917008F2828 /* Climber.swift */; };
 		3F68771B26008E42008F2828 /* PhysicsCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68771A26008E42008F2828 /* PhysicsCategories.swift */; };
 		3F687720260091ED008F2828 /* Rock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68771F260091ED008F2828 /* Rock.swift */; };
+		3FC72A662602BB0F00C266B2 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A652602BB0F00C266B2 /* ButtonNode.swift */; };
+		3FC72A742602C7ED00C266B2 /* LeftWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A732602C7ED00C266B2 /* LeftWall.swift */; };
+		3FC72A7C2602C80400C266B2 /* RightWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A7B2602C80400C266B2 /* RightWall.swift */; };
+		3FC72A812602C9AE00C266B2 /* Rope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A802602C9AE00C266B2 /* Rope.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		3F68771526008917008F2828 /* Climber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Climber.swift; sourceTree = "<group>"; };
 		3F68771A26008E42008F2828 /* PhysicsCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategories.swift; sourceTree = "<group>"; };
 		3F68771F260091ED008F2828 /* Rock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rock.swift; sourceTree = "<group>"; };
+		3FC72A652602BB0F00C266B2 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		3FC72A732602C7ED00C266B2 /* LeftWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftWall.swift; sourceTree = "<group>"; };
+		3FC72A7B2602C80400C266B2 /* RightWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightWall.swift; sourceTree = "<group>"; };
+		3FC72A802602C9AE00C266B2 /* Rope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rope.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +165,12 @@
 		3F4FD2B626006C1D00C350E0 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				3FC72A732602C7ED00C266B2 /* LeftWall.swift */,
+				3FC72A642602BAE400C266B2 /* Views */,
 				3F68771526008917008F2828 /* Climber.swift */,
 				3F68771F260091ED008F2828 /* Rock.swift */,
+				3FC72A7B2602C80400C266B2 /* RightWall.swift */,
+				3FC72A802602C9AE00C266B2 /* Rope.swift */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -187,6 +199,14 @@
 				3F4FD2C526006D1300C350E0 /* GameOverScene.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3FC72A642602BAE400C266B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FC72A652602BB0F00C266B2 /* ButtonNode.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC72A7C2602C80400C266B2 /* RightWall.swift in Sources */,
+				3FC72A812602C9AE00C266B2 /* Rope.swift in Sources */,
 				3F4FD2CB26006D8F00C350E0 /* CharacterViewController.swift in Sources */,
 				3F4FD2C626006D1300C350E0 /* GameOverScene.swift in Sources */,
 				3F4FD2852600663100C350E0 /* GameScene.swift in Sources */,
@@ -329,6 +351,8 @@
 				3F68771626008917008F2828 /* Climber.swift in Sources */,
 				3F4FD27F2600663100C350E0 /* AppDelegate.swift in Sources */,
 				3F4FD2BD26006CA200C350E0 /* HomeViewController.swift in Sources */,
+				3FC72A742602C7ED00C266B2 /* LeftWall.swift in Sources */,
+				3FC72A662602BB0F00C266B2 /* ButtonNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +530,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.henrycalderon.Falling-Valley";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -525,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.henrycalderon.Falling-Valley";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
