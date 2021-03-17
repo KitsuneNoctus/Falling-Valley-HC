@@ -14,11 +14,11 @@ class Climber: SKSpriteNode {
     //MARK: Init
     init(){
         let square = SKTexture(imageNamed: "climberCharacter")
-        let size = CGSize(width: 30, height: 30)
+        let size = CGSize(width: 45, height: 45)
         super.init(texture: square, color: .clear, size: size)
 
         self.physicsBody = SKPhysicsBody(rectangleOf: size)
-        self.physicsBody?.isDynamic = false
+        self.physicsBody?.isDynamic = true
         self.physicsBody?.categoryBitMask = PhysicsCategory.Climber
     }
     

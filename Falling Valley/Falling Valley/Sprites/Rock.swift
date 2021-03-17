@@ -14,7 +14,7 @@ class Rock: SKSpriteNode {
     //MARK: Init
     init(){
         let square = SKTexture(imageNamed: "basicRock")
-        let size = CGSize(width: 45, height: 45)
+        let size = CGSize(width: 55, height: 55)
         super.init(texture: square, color: .clear, size: size)
         /// Physics
         self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/2)

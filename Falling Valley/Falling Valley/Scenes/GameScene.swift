@@ -12,11 +12,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var player: Climber!
     
+    //MARK: Did Move
     override func didMove(to view: SKView) {
         
+        //Physics World
+        physicsWorld.contactDelegate = self
+        physicsWorld.gravity = CGVector(dx: 0, dy: -0.5)
+        
+        createPlayer()
+    }
+    
+    //MARK: Update
+    override func update(_ currentTime: TimeInterval) {
+        // Called before each frame is rendered
+    }
+    
+    //MARK: Creation
+    func createPlayer(){
+        player = Climber()
+        player.position = CGPoint(x: frame.size.width/2, y: frame.size.height/2)
+        self.addChild(player)
     }
     
     
+    //MARK: Touches
     func touchDown(atPoint pos : CGPoint) {
     }
     
@@ -36,10 +55,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
     }
 }
