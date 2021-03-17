@@ -27,9 +27,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //MARK: Did Move
     override func didMove(to view: SKView) {
         
-//        let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: Selector("swipedRight:"))
-//        swipeRight.direction = .right
-//        view.addGestureRecognizer(swipeRight)
+        /// Swipe Right
+        let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipedRight(sender:)))
+        swipeRight.direction = .right
+        view.addGestureRecognizer(swipeRight)
+        
+        /// Swipe Left
+        let swipeLeft:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipedLeft(sender:)))
+        swipeLeft.direction = .left
+        view.addGestureRecognizer(swipeLeft)
         
         //Physics World
         physicsWorld.contactDelegate = self
@@ -69,8 +75,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: Touches
     
-    func swipedRight(sender:UISwipeGestureRecognizer){
+    @objc func swipedRight(sender:UISwipeGestureRecognizer){
         print("swiped right")
+    }
+    
+    @objc func swipedLeft(sender:UISwipeGestureRecognizer){
+        print("swiped left")
     }
     
     func touchDown(atPoint pos : CGPoint) {
