@@ -27,6 +27,7 @@
 		3FC72A7C2602C80400C266B2 /* RightWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A7B2602C80400C266B2 /* RightWall.swift */; };
 		3FC72A812602C9AE00C266B2 /* Rope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A802602C9AE00C266B2 /* Rope.swift */; };
 		3FC72A862602F32A00C266B2 /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A852602F32A00C266B2 /* Clouds.swift */; };
+		3FD7E8FA2603081C008161AE /* scrollLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E8F92603081B008161AE /* scrollLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		3FC72A7B2602C80400C266B2 /* RightWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightWall.swift; sourceTree = "<group>"; };
 		3FC72A802602C9AE00C266B2 /* Rope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rope.swift; sourceTree = "<group>"; };
 		3FC72A852602F32A00C266B2 /* Clouds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
+		3FD7E8F92603081B008161AE /* scrollLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrollLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				3FC72A7B2602C80400C266B2 /* RightWall.swift */,
 				3FC72A802602C9AE00C266B2 /* Rope.swift */,
 				3FC72A852602F32A00C266B2 /* Clouds.swift */,
+				3FD7E8F92603081B008161AE /* scrollLayer.swift */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				3F4FD2C626006D1300C350E0 /* GameOverScene.swift in Sources */,
 				3F4FD2852600663100C350E0 /* GameScene.swift in Sources */,
 				3F687720260091ED008F2828 /* Rock.swift in Sources */,
+				3FD7E8FA2603081C008161AE /* scrollLayer.swift in Sources */,
 				3F68771B26008E42008F2828 /* PhysicsCategories.swift in Sources */,
 				3F4FD2872600663100C350E0 /* GameViewController.swift in Sources */,
 				3F68771626008917008F2828 /* Climber.swift in Sources */,

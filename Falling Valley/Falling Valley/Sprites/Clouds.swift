@@ -24,8 +24,8 @@ class Clouds: SKSpriteNode {
 //        let moveDown = SKAction.moveTo(y: - 30, duration: 20)
 //        let moveUp = SKAction.moveTo(y: self.position.y + 30, duration: 20)
         
-        let objects = SKAction.sequence([moveDown,moveUp])
-        let startMoving = SKAction.repeatForever(objects)
-        self.run(startMoving)
+//        let objects = SKAction.sequence([moveDown,moveUp])
+//        let startMoving = SKAction.repeatForever(objects)
+//        self.run(startMoving)
     }
 }

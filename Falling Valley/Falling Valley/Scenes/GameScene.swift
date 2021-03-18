@@ -15,6 +15,7 @@ enum GameSceneState {
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var time: CFTimeInterval = 0
     let timerLabel = SKLabelNode(fontNamed: UIFont.boldSystemFont(ofSize: 16).fontName)
+    let scrollSpeed: CGFloat = 100
     
     //Game Management
     var gameState: GameSceneState = .active
@@ -25,10 +26,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Items
     var player: Climber!
+    var scroll: SKNode!
     
     //MARK: Did Move
     override func didMove(to view: SKView) {
         self.backgroundColor = UIColor(named: "skyColor") ?? .blue
+        
+        scroll = scrollLayer()
         
         /// Swipe Right
         let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipedRight(sender:)))
@@ -72,6 +76,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
+        scrollRope()
         
         let playerVelocityY = player.physicsBody?.velocity.dy ?? 0
         if playerVelocityY > 100{
@@ -116,8 +121,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func generateRope(){
         let rope = Rope(scene: self)
+        let rope2 = Rope(scene: self)
         rope.position = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
+        rope2.position = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
         self.addChild(rope)
+        self.addChild(rope2)
     }
     
     func createClouds(){
@@ -204,5 +212,42 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gameOverScene.scaleMode = .aspectFill
         let crossFade = SKTransition.crossFade(withDuration: 0.75)
         view?.presentScene(gameOverScene, transition: crossFade)
+    }
+    
+    //MARK: Scroll World
+    func scrollWorld(){
+        /* Scroll World */
+        scroll.position.x -= scrollSpeed * CGFloat(fixedDelta)
+
+        /* Loop through scroll layer nodes */
+        for wall in scroll.children as! [SKSpriteNode] {
+
+            /* Get ground node position, convert node position to scene space */
+            let wallPosition = scroll.convert(wall.position, to: self)
+
+            /* Check if ground sprite has left the scene */
+            if wallPosition.y <= -wall.size.width / 2 {
+
+                /* Reposition ground sprite to the second starting position */
+                let newPosition = CGPoint(x: wallPosition.x, y: (self.size.width / 2) + wall.size.height)
+
+                /* Convert new node position back to scroll layer space */
+                wall.position = self.convert(newPosition, to: scroll)
+            }
+        }
+    }
+    
+    func scrollRope(){
+        for node in self.children{
+            if node.name == "Rope"{
+                node.position.y -= scrollSpeed * CGFloat(fixedDelta)
+                if node.position.y <= -node.frame.size.height / 2 {
+                    let newPosition = CGPoint(x: node.position.x, y: (self.size.height / 2) + node.frame.size.height)
+
+                    /* Convert new node position back to scroll layer space */
+                    node.position = self.convert(newPosition, to: node)
+                }
+            }
+        }
     }
 }

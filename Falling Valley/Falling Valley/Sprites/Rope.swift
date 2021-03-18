@@ -13,6 +13,7 @@ class Rope: SKSpriteNode {
         let texture = SKTexture(imageNamed: "rope")
         let size = CGSize(width: 5, height: (scene.view?.bounds.height)!+100)
         super.init(texture: texture, color: .clear, size: size)
+        self.name = "Rope"
         
         self.physicsBody = SKPhysicsBody(rectangleOf: size)
         self.physicsBody?.isDynamic = false
