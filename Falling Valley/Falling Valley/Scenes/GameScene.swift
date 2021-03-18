@@ -57,6 +57,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         time += fixedDelta
         timerLabel.text = "Time: \(time)"
         
+        for node in self.children{
+            if node.name == "Rock"{
+                if node.position.y < -70{
+                    node.removeFromParent()
+                }
+            }
+            
+            if node.name == "Climber"{
+                if node.position.y < -70{
+                    node.removeFromParent()
+                    gameOver()
+                }
+            }
+        }
+        
         let playerVelocityY = player.physicsBody?.velocity.dy ?? 0
         if playerVelocityY > 100{
             player.physicsBody?.velocity.dy = 100
