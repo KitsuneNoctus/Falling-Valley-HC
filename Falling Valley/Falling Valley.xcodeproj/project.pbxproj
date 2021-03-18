@@ -26,6 +26,7 @@
 		3FC72A742602C7ED00C266B2 /* LeftWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A732602C7ED00C266B2 /* LeftWall.swift */; };
 		3FC72A7C2602C80400C266B2 /* RightWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A7B2602C80400C266B2 /* RightWall.swift */; };
 		3FC72A812602C9AE00C266B2 /* Rope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A802602C9AE00C266B2 /* Rope.swift */; };
+		3FC72A862602F32A00C266B2 /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC72A852602F32A00C266B2 /* Clouds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		3FC72A732602C7ED00C266B2 /* LeftWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftWall.swift; sourceTree = "<group>"; };
 		3FC72A7B2602C80400C266B2 /* RightWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightWall.swift; sourceTree = "<group>"; };
 		3FC72A802602C9AE00C266B2 /* Rope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rope.swift; sourceTree = "<group>"; };
+		3FC72A852602F32A00C266B2 /* Clouds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				3F68771F260091ED008F2828 /* Rock.swift */,
 				3FC72A7B2602C80400C266B2 /* RightWall.swift */,
 				3FC72A802602C9AE00C266B2 /* Rope.swift */,
+				3FC72A852602F32A00C266B2 /* Clouds.swift */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				3F68771626008917008F2828 /* Climber.swift in Sources */,
 				3F4FD27F2600663100C350E0 /* AppDelegate.swift in Sources */,
 				3F4FD2BD26006CA200C350E0 /* HomeViewController.swift in Sources */,
+				3FC72A862602F32A00C266B2 /* Clouds.swift in Sources */,
 				3FC72A742602C7ED00C266B2 /* LeftWall.swift in Sources */,
 				3FC72A662602BB0F00C266B2 /* ButtonNode.swift in Sources */,
 			);

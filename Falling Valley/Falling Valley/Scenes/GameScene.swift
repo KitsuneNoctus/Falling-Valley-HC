@@ -45,6 +45,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.gravity = CGVector(dx: 0, dy: -0.5)
         
         createTimer()
+        createClouds()
         generateRope()
         createPlayer()
         spawnRocks()
@@ -117,6 +118,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let rope = Rope(scene: self)
         rope.position = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
         self.addChild(rope)
+    }
+    
+    func createClouds(){
+        let clouds = Clouds()
+        clouds.movement()
+        clouds.position = CGPoint(x: self.frame.width/2, y: (self.frame.height/2)+70)
+        self.addChild(clouds)
     }
     
     //MARK: Timer
