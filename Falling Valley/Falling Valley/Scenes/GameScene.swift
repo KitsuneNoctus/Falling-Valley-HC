@@ -22,7 +22,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var sinceTouch: CFTimeInterval = 0
     let fixedDelta: CFTimeInterval = 1.0 / 60.0
-//    let fixedDelta: CFTimeInterval = 1.0 / 60.0
     
     //Items
     var player: Climber!
@@ -210,6 +209,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func gameOver(){
         let gameOverScene = GameOverScene(size: (self.view?.bounds.size)!)
         gameOverScene.scaleMode = .aspectFill
+        gameOverScene.time = Int(time)
         let crossFade = SKTransition.crossFade(withDuration: 0.75)
         view?.presentScene(gameOverScene, transition: crossFade)
     }

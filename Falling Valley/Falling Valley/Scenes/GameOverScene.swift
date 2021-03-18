@@ -13,6 +13,8 @@ class GameOverScene: SKScene {
     let overLabel = SKLabelNode()
     let timeLabel = SKLabelNode()
     
+    var time = 0
+    
     override init(size: CGSize) {
         // do initial configuration work here
         super.init(size: size)
@@ -42,6 +44,15 @@ class GameOverScene: SKScene {
         overLabel.horizontalAlignmentMode = .center
         overLabel.verticalAlignmentMode = .center
         self.addChild(overLabel)
+        
+        timeLabel.text = "Final Time: \(time) seconds"
+//        overLabel.color = .black
+        timeLabel.fontSize = 40
+        timeLabel.zPosition = 5
+        timeLabel.position = CGPoint(x: frame.size.width/2, y: self.frame.midY - 100)
+        timeLabel.horizontalAlignmentMode = .center
+        timeLabel.verticalAlignmentMode = .center
+        self.addChild(timeLabel)
     }
     
     //MARK: Buttons
