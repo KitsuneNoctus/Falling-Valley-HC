@@ -12,13 +12,14 @@ class Rope: SKSpriteNode {
     init(scene: SKScene){
         let texture = SKTexture(imageNamed: "rope")
         let size = CGSize(width: 5, height: (scene.view?.bounds.height)!+100)
-//        var size = CGSize(width: 5, height: 2000)
-//        if let view = scene.view{
-//            self.size = CGSize(width: 5, height: view.bounds.height+10)
-//        }
-//        super.init(texture: texture, color: .clear, size: size)
-//        self.zPosition = 1
         super.init(texture: texture, color: .clear, size: size)
+        
+        self.physicsBody = SKPhysicsBody(rectangleOf: size)
+        self.physicsBody?.isDynamic = false
+        
+        self.physicsBody?.categoryBitMask = PhysicsCategory.Rope
+//        self.physicsBody?.collisionBitMask = PhysicsCategory.Climber
+//        self.physicsBody?.contactTestBitMask = PhysicsCategory.Climber
     }
     
     required init?(coder aDecoder: NSCoder) {

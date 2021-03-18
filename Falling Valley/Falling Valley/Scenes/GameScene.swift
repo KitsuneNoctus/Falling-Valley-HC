@@ -67,7 +67,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //MARK: Creation
     func createPlayer(){
         player = Climber()
-        player.position = CGPoint(x: frame.size.width/2, y: frame.size.height/2)
+        player.position = CGPoint(x: (frame.size.width/2)-20, y: (frame.size.height/2))
         self.addChild(player)
     }
     
@@ -146,6 +146,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if collision == PhysicsCategory.Climber | PhysicsCategory.Obstacle{
             print("Collision occurred - end game")
             gameOver()
+        }else if collision == PhysicsCategory.Climber | PhysicsCategory.Rope{
+            print("Thats the rope")
         }
     }
     

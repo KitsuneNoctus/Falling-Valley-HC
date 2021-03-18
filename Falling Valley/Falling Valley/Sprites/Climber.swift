@@ -21,7 +21,9 @@ class Climber: SKSpriteNode {
         self.physicsBody = SKPhysicsBody(rectangleOf: size)
         self.physicsBody?.isDynamic = true
         self.physicsBody?.allowsRotation = false
+        
         self.physicsBody?.categoryBitMask = PhysicsCategory.Climber
+        self.physicsBody?.contactTestBitMask = PhysicsCategory.Rope
     }
     
     required init?(coder aDecoder: NSCoder) {
