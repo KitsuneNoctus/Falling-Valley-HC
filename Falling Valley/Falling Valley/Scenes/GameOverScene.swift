@@ -51,7 +51,8 @@ class GameOverScene: SKScene {
         let button = ButtonNode(normalTexture: buttonTexture, selectedTexture: buttonTexture, disabledTexture: buttonTexture)
         button.setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(GameOverScene.playAgain))
         button.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        button.size.height = 200
+        button.size.height = self.size.width/4
+        button.size.width = self.size.width/2
         button.zPosition = 20
         button.name = "button"
         self.addChild(button)

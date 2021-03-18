@@ -13,13 +13,15 @@ enum GameSceneState {
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    var points = 0
+    var time: CFTimeInterval = 0
+    let timerLabel = SKLabelNode(fontNamed: UIFont.boldSystemFont(ofSize: 16).fontName)
     
     //Game Management
     var gameState: GameSceneState = .active
     
     var sinceTouch: CFTimeInterval = 0
     let fixedDelta: CFTimeInterval = 1.0 / 60.0
+//    let fixedDelta: CFTimeInterval = 1.0 / 60.0
     
     //Items
     var player: Climber!
@@ -42,14 +44,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: -0.5)
         
+        createTimer()
         generateRope()
         createPlayer()
         spawnRocks()
+        startTimer()
     }
     
     //MARK: Update
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        time += fixedDelta
+        timerLabel.text = "Time: \(time)"
         
         let playerVelocityY = player.physicsBody?.velocity.dy ?? 0
         if playerVelocityY > 100{
@@ -67,7 +73,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //MARK: Creation
     func createPlayer(){
         player = Climber()
-        player.position = CGPoint(x: (frame.size.width/2)-20, y: (frame.size.height/2))
+        player.position = CGPoint(x: (frame.size.width/2), y: (frame.size.height/2))
         self.addChild(player)
     }
     
@@ -98,6 +104,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(rope)
     }
     
+    //MARK: Timer
+    func createTimer(){
+        timerLabel.text = "Time: \(time)"
+        timerLabel.fontSize = 40
+        timerLabel.zPosition = 10
+        timerLabel.position = CGPoint(x: 30, y: self.frame.height-50)
+        timerLabel.horizontalAlignmentMode = .left
+        timerLabel.verticalAlignmentMode = .top
+        self.addChild(timerLabel)
+    }
+    
+    func startTimer(){
+        
+    }
+    
+    func endTimer(){
+        
+    }
     
     //MARK: Touches
     
