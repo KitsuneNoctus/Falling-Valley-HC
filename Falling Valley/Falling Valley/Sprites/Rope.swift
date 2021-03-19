@@ -20,7 +20,7 @@ class Rope: SKSpriteNode {
         
         self.physicsBody?.categoryBitMask = PhysicsCategory.Rope
 //        self.physicsBody?.collisionBitMask = PhysicsCategory.Climber
-//        self.physicsBody?.contactTestBitMask = PhysicsCategory.Climber
+        self.physicsBody?.contactTestBitMask = PhysicsCategory.Climber
     }
     
     required init?(coder aDecoder: NSCoder) {

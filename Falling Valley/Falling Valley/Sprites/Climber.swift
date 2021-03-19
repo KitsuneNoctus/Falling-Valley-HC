@@ -24,6 +24,7 @@ class Climber: SKSpriteNode {
         self.physicsBody?.allowsRotation = false
         
         self.physicsBody?.categoryBitMask = PhysicsCategory.Climber
+//        self.physicsBody?.collisionBitMask = PhysicsCategory.Rope
         self.physicsBody?.contactTestBitMask = PhysicsCategory.Rope
     }
     

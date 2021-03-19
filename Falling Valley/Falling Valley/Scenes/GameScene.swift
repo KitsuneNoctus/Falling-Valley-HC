@@ -26,12 +26,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Items
     var player: Climber!
     var scroll: SKNode!
+    var rope1: SKSpriteNode!
+    var rope2: SKSpriteNode!
     
     //MARK: Did Move
     override func didMove(to view: SKView) {
         self.backgroundColor = UIColor(named: "skyColor") ?? .blue
         
-        scroll = scrollLayer()
+        scroll = scrollLayer(scene: self)
+        scroll.position = CGPoint(x: frame.size.width/2, y: frame.size.height/2)
+        self.addChild(scroll)
         
         /// Swipe Right
         let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipedRight(sender:)))
@@ -47,6 +51,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: -0.5)
         
+        scrollWorld()
         createTimer()
         createClouds()
         generateRope()
@@ -119,11 +124,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func generateRope(){
-        let rope = Rope(scene: self)
-        let rope2 = Rope(scene: self)
-        rope.position = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
-        rope2.position = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
-        self.addChild(rope)
+        self.rope1 = Rope(scene: self)
+        self.rope2 = Rope(scene: self)
+        self.rope1.position = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
+        self.rope2.position = CGPoint(x: self.frame.width/2, y: self.frame.height + (self.frame.height/2))
+        self.addChild(rope1)
         self.addChild(rope2)
     }
     
@@ -238,16 +243,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func scrollRope(){
+        rope1.position.y -= scrollSpeed * CGFloat(fixedDelta)
+        rope2.position.y -= scrollSpeed * CGFloat(fixedDelta)
         for node in self.children{
             if node.name == "Rope"{
-                node.position.y -= scrollSpeed * CGFloat(fixedDelta)
                 if node.position.y <= -node.frame.size.height / 2 {
-                    let newPosition = CGPoint(x: node.position.x, y: (self.size.height / 2) + node.frame.size.height)
-
-                    /* Convert new node position back to scroll layer space */
-                    node.position = self.convert(newPosition, to: node)
+                    let newPosition = CGPoint(x: self.frame.width/2, y: self.size.height + (self.size.height/2))
+                    node.position = newPosition
                 }
             }
         }
+
     }
 }

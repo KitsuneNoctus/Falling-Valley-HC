@@ -9,12 +9,14 @@ import UIKit
 import SpriteKit
 
 class LeftWall: SKSpriteNode {
-//    init() {
-//        let texture = SKTexture(imageNamed: "leftWall")
-//        super.init(texture: square, color: .clear, size: size)
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    init() {
+        let texture = SKTexture(imageNamed: "leftWall")
+        let size = CGSize(width: 15, height: 300)
+        super.init(texture: texture, color: .clear, size: size)
+        self.name = "leftWall"
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
