@@ -10,8 +10,8 @@ import SpriteKit
 
 class GameOverScene: SKScene {
     
-    let overLabel = SKLabelNode()
-    let timeLabel = SKLabelNode()
+    let overLabel = SKLabelNode(fontNamed: UIFont.boldSystemFont(ofSize: 16).fontName)
+    let timeLabel = SKLabelNode(fontNamed: UIFont.boldSystemFont(ofSize: 16).fontName)
     
     var time = 0
     
