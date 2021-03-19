@@ -86,6 +86,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
+        
+        if (self.frame.width/2)-40 <= player.position.x && player.position.x <= (self.frame.width/2)+40{
+            player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 0.2))
+            let playerVelocityY = player.physicsBody?.velocity.dy ?? 0
+            if playerVelocityY > 10{
+                player.physicsBody?.velocity.dy = 10
+            }
+        }
         scrollRope()
         scrollWalls()
         
@@ -232,6 +240,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             gameOver()
         }else if collision == PhysicsCategory.Climber | PhysicsCategory.Rope{
             print("Thats the rope")
+            player.removeAllActions()
         }
     }
     
