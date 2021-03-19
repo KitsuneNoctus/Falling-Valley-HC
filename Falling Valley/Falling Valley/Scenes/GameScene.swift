@@ -106,6 +106,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             player.physicsBody?.velocity.dy = -110
         }
         
+        if player.position.y >= self.frame.height - (player.size.height/2){
+            player.position.y = self.frame.height - (player.size.height/2)
+        }
+        
         // Update Timer
         sinceTouch += fixedDelta
     }
