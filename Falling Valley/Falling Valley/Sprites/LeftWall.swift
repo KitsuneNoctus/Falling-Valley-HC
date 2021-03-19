@@ -9,9 +9,9 @@ import UIKit
 import SpriteKit
 
 class LeftWall: SKSpriteNode {
-    init() {
+    init(scene: SKScene) {
         let texture = SKTexture(imageNamed: "leftWall")
-        let size = CGSize(width: 15, height: 300)
+        let size = CGSize(width: 20, height: scene.size.height + 100)
         super.init(texture: texture, color: .clear, size: size)
         self.name = "leftWall"
     }

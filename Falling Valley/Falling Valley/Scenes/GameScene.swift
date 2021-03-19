@@ -29,13 +29,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var rope1: SKSpriteNode!
     var rope2: SKSpriteNode!
     
+    var leftWallBottom: SKSpriteNode!
+    var leftWallTop: SKSpriteNode!
+    var rightWallBottom: SKSpriteNode!
+    var rightWallTop: SKSpriteNode!
+    
     //MARK: Did Move
     override func didMove(to view: SKView) {
         self.backgroundColor = UIColor(named: "skyColor") ?? .blue
         
-        scroll = scrollLayer(scene: self)
-        scroll.position = CGPoint(x: frame.size.width/2, y: frame.size.height/2)
-        self.addChild(scroll)
+//        scroll = scrollLayer(scene: self)
+//        scroll.position = CGPoint(x: frame.size.width/2, y: frame.size.height/2)
+//        self.addChild(scroll)
         
         /// Swipe Right
         let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipedRight(sender:)))
@@ -51,7 +56,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: -0.5)
         
-        scrollWorld()
+//        scrollWorld()
+        createWalls()
         createTimer()
         createClouds()
         generateRope()
@@ -81,6 +87,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         scrollRope()
+        scrollWalls()
         
         let playerVelocityY = player.physicsBody?.velocity.dy ?? 0
         if playerVelocityY > 100{
@@ -137,6 +144,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         clouds.movement()
         clouds.position = CGPoint(x: self.frame.width/2, y: (self.frame.height/2)+70)
         self.addChild(clouds)
+    }
+    
+    func createWalls(){
+        self.leftWallBottom = LeftWall(scene: self)
+        self.leftWallTop = LeftWall(scene: self)
+        
+        self.rightWallBottom = RightWall(scene: self)
+        self.rightWallTop = RightWall(scene: self)
+        
+        self.leftWallBottom.position = CGPoint(x: 10, y: 0)
+        self.leftWallTop.position = CGPoint(x:10,y:self.frame.height+100)
+        self.rightWallBottom.position = CGPoint(x: self.frame.width-10, y: 0)
+        self.rightWallTop.position = CGPoint(x:self.frame.width-10,y:self.frame.height+100)
+        
+        self.addChild(leftWallBottom)
+        self.addChild(leftWallTop)
+        self.addChild(rightWallBottom)
+        self.addChild(rightWallTop)
     }
     
     //MARK: Timer
@@ -220,27 +245,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //MARK: Scroll World
-    func scrollWorld(){
-        /* Scroll World */
-        scroll.position.x -= scrollSpeed * CGFloat(fixedDelta)
-
-        /* Loop through scroll layer nodes */
-        for wall in scroll.children as! [SKSpriteNode] {
-
-            /* Get ground node position, convert node position to scene space */
-            let wallPosition = scroll.convert(wall.position, to: self)
-
-            /* Check if ground sprite has left the scene */
-            if wallPosition.y <= -wall.size.width / 2 {
-
-                /* Reposition ground sprite to the second starting position */
-                let newPosition = CGPoint(x: wallPosition.x, y: (self.size.width / 2) + wall.size.height)
-
-                /* Convert new node position back to scroll layer space */
-                wall.position = self.convert(newPosition, to: scroll)
-            }
-        }
-    }
+//    func scrollWorld(){
+//        /* Scroll World */
+//        scroll.position.x -= scrollSpeed * CGFloat(fixedDelta)
+//
+//        /* Loop through scroll layer nodes */
+//        for wall in scroll.children as! [SKSpriteNode] {
+//
+//            /* Get ground node position, convert node position to scene space */
+//            let wallPosition = scroll.convert(wall.position, to: self)
+//
+//            /* Check if ground sprite has left the scene */
+//            if wallPosition.y <= -wall.size.width / 2 {
+//
+//                /* Reposition ground sprite to the second starting position */
+//                let newPosition = CGPoint(x: wallPosition.x, y: (self.size.width / 2) + wall.size.height)
+//
+//                /* Convert new node position back to scroll layer space */
+//                wall.position = self.convert(newPosition, to: scroll)
+//            }
+//        }
+//    }
     
     func scrollRope(){
         rope1.position.y -= scrollSpeed * CGFloat(fixedDelta)
@@ -254,5 +279,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
 
+    }
+//    func scrollWallsL(){
+//        leftWallTop.position.y -= scrollSpeed * CGFloat(fixedDelta)
+//        leftWallBottom.position.y -= scrollSpeed * CGFloat(fixedDelta)
+//        for node in self.children{
+//        }
+//    }
+    
+    func scrollWalls(){
+        rightWallTop.position.y -= scrollSpeed * CGFloat(fixedDelta)
+        rightWallBottom.position.y -= scrollSpeed * CGFloat(fixedDelta)
+        leftWallTop.position.y -= scrollSpeed * CGFloat(fixedDelta)
+        leftWallBottom.position.y -= scrollSpeed * CGFloat(fixedDelta)
+        
+        for node in self.children{
+            if node.name == "leftWall"{
+                if node.position.y <= -node.frame.size.height / 2 {
+                    let newPosition = CGPoint(x: node.position.x, y: (self.size.height+100) + ((self.size.height+100)/2))
+                    node.position = newPosition
+                }
+            }
+            
+            if node.name == "rightWall"{
+                if node.position.y <= -node.frame.size.height / 2 {
+                    let newPosition = CGPoint(x: node.position.x, y: (self.size.height+100) + ((self.size.height+100)/2))
+                    node.position = newPosition
+                }
+            }
+        }
     }
 }
