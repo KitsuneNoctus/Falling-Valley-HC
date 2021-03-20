@@ -16,7 +16,6 @@ class HomeViewController: UIViewController {
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupView()
         charactersButton.isEnabled = false
         settingsButton.isEnabled = false
     }
