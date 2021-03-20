@@ -26,6 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Items
     var player: Climber!
+    var chosenCharacter: Characters = .climber1
     var scroll: SKNode!
     var rope1: SKSpriteNode!
     var rope2: SKSpriteNode!
@@ -117,7 +118,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: Creation
     func createPlayer(){
-        player = Climber()
+        player = Climber(character: chosenCharacter)
         player.position = CGPoint(x: (frame.size.width/2), y: (frame.size.height/2))
         self.addChild(player)
     }

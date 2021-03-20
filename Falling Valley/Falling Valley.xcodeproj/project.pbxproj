@@ -10,6 +10,8 @@
 		3F012AED2606943B0009C68A /* jumpSound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F012AEC2606943B0009C68A /* jumpSound1.mp3 */; };
 		3F012AF22606954D0009C68A /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F012AF12606954D0009C68A /* CreditsViewController.swift */; };
 		3F012AF72606955D0009C68A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F012AF62606955D0009C68A /* SettingsViewController.swift */; };
+		3F012AFC26069E1C0009C68A /* soundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F012AFB26069E1C0009C68A /* soundPlayer.swift */; };
+		3F012B0326069E7E0009C68A /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F012B0226069E7E0009C68A /* Characters.swift */; };
 		3F4FD27F2600663100C350E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD27E2600663100C350E0 /* AppDelegate.swift */; };
 		3F4FD2812600663100C350E0 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F4FD2802600663100C350E0 /* GameScene.sks */; };
 		3F4FD2832600663100C350E0 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F4FD2822600663100C350E0 /* Actions.sks */; };
@@ -54,6 +56,8 @@
 		3F012AEC2606943B0009C68A /* jumpSound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jumpSound1.mp3; sourceTree = "<group>"; };
 		3F012AF12606954D0009C68A /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		3F012AF62606955D0009C68A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3F012AFB26069E1C0009C68A /* soundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soundPlayer.swift; sourceTree = "<group>"; };
+		3F012B0226069E7E0009C68A /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		3F4FD27B2600663100C350E0 /* Falling Valley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Falling Valley.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4FD27E2600663100C350E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F4FD2802600663100C350E0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -108,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F012B0026069E630009C68A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F012B0226069E7E0009C68A /* Characters.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3F4FD2722600663100C350E0 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +143,7 @@
 		3F4FD27D2600663100C350E0 /* Falling Valley */ = {
 			isa = PBXGroup;
 			children = (
+				3F012B0026069E630009C68A /* Model */,
 				3F4FD2C426006CF900C350E0 /* Scenes */,
 				3F4FD2BB26006C7C00C350E0 /* View Controllers */,
 				3F4FD2B726006C2500C350E0 /* Sounds */,
@@ -191,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				3F012AEC2606943B0009C68A /* jumpSound1.mp3 */,
+				3F012AFB26069E1C0009C68A /* soundPlayer.swift */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -358,10 +372,12 @@
 			files = (
 				3FC72A7C2602C80400C266B2 /* RightWall.swift in Sources */,
 				3FC72A812602C9AE00C266B2 /* Rope.swift in Sources */,
+				3F012AFC26069E1C0009C68A /* soundPlayer.swift in Sources */,
 				3F4FD2CB26006D8F00C350E0 /* CharacterViewController.swift in Sources */,
 				3F012AF22606954D0009C68A /* CreditsViewController.swift in Sources */,
 				3F4FD2C626006D1300C350E0 /* GameOverScene.swift in Sources */,
 				3F4FD2852600663100C350E0 /* GameScene.swift in Sources */,
+				3F012B0326069E7E0009C68A /* Characters.swift in Sources */,
 				3F687720260091ED008F2828 /* Rock.swift in Sources */,
 				3FD7E8FA2603081C008161AE /* scrollLayer.swift in Sources */,
 				3F68771B26008E42008F2828 /* PhysicsCategories.swift in Sources */,

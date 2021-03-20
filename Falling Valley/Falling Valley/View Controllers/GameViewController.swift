@@ -10,6 +10,8 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
+    var chosenCharacter: Characters = .climber1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,7 @@ class GameViewController: UIViewController {
             // Set the scale mode to scale to fit the window
             scene.scaleMode = .aspectFill
             // view.supportedInterfaceOrientations
+            scene.chosenCharacter = chosenCharacter
 
             // Present the scene
             view.presentScene(scene)

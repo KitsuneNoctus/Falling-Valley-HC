@@ -12,8 +12,8 @@ import GameplayKit
 class Climber: SKSpriteNode {
 
     //MARK: Init
-    init(){
-        let square = SKTexture(imageNamed: "climberCharacter")
+    init(character: Characters){
+        let square = SKTexture(imageNamed: character.rawValue)
         let size = CGSize(width: 45, height: 45)
         super.init(texture: square, color: .clear, size: size)
         self.name = "Climber"

@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     @IBAction func pressPlay(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "gameViewController") as! GameViewController
+        vc.chosenCharacter = .climber1
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
