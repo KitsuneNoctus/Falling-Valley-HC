@@ -219,6 +219,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        rightWallTop.position.y -= 10
+//        rightWallBottom.position.y -= 10
+//        leftWallTop.position.y -= 10
+//        leftWallBottom.position.y -= 10
         
         if gameState != .active { return }
         player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
