@@ -36,6 +36,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var rightWallBottom: SKSpriteNode!
     var rightWallTop: SKSpriteNode!
     
+    //Sounds
+    let jump = SKAction.playSoundFileNamed("jumpSound1.mp3", waitForCompletion: false)
+    
     //MARK: Did Move
     override func didMove(to view: SKView) {
         self.backgroundColor = UIColor(named: "skyColor") ?? .blue
@@ -229,6 +232,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if gameState != .active { return }
         player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
         player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 10))
+        player.run(jump)
         sinceTouch = 0
     }
     
