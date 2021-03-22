@@ -29,7 +29,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Items
     var player: Climber!
     var chosenCharacter: Characters = .climber1
-    var scroll: SKNode!
+    
     var rope1: SKSpriteNode!
     var rope2: SKSpriteNode!
     
@@ -45,9 +45,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMove(to view: SKView) {
         self.backgroundColor = UIColor(named: "skyColor") ?? .blue
         
-//        scroll = scrollLayer(scene: self)
-//        scroll.position = CGPoint(x: frame.size.width/2, y: frame.size.height/2)
-//        self.addChild(scroll)
         
         /// Swipe Right
         let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipedRight(sender:)))
@@ -63,14 +60,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: -0.5)
         
-//        scrollWorld()
         createWalls()
         createTimer()
         createClouds()
         generateRope()
         createPlayer()
         spawnRocks()
-        startTimer()
+//        startTimer()
     }
     
     //MARK: Update
@@ -78,7 +74,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Called before each frame is rendered
 //        timing += fixedDelta
 //        time += Int(timing/0.6)
-//        timerLabel.text = "Time: \(time)"
+        time += Int(100 * CGFloat(fixedDelta))
+        timerLabel.text = "Time: \(time/100)"
         
         for node in self.children{
             if node.name == "Rock"{
@@ -196,6 +193,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func startTimer(){
+//        Using this https://stackoverflow.com/questions/23978209/spritekit-creating-a-timer
         timerLabel.run(SKAction.repeatForever(SKAction.sequence([
             SKAction.run({
                 self.time += 1
@@ -271,34 +269,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func gameOver(){
         let gameOverScene = GameOverScene(size: (self.view?.bounds.size)!)
         gameOverScene.scaleMode = .aspectFill
-        gameOverScene.time = Int(time)
+        gameOverScene.time = Int(time)/100
         let crossFade = SKTransition.crossFade(withDuration: 0.75)
         view?.presentScene(gameOverScene, transition: crossFade)
     }
     
     //MARK: Scroll World
-//    func scrollWorld(){
-//        /* Scroll World */
-//        scroll.position.x -= scrollSpeed * CGFloat(fixedDelta)
-//
-//        /* Loop through scroll layer nodes */
-//        for wall in scroll.children as! [SKSpriteNode] {
-//
-//            /* Get ground node position, convert node position to scene space */
-//            let wallPosition = scroll.convert(wall.position, to: self)
-//
-//            /* Check if ground sprite has left the scene */
-//            if wallPosition.y <= -wall.size.width / 2 {
-//
-//                /* Reposition ground sprite to the second starting position */
-//                let newPosition = CGPoint(x: wallPosition.x, y: (self.size.width / 2) + wall.size.height)
-//
-//                /* Convert new node position back to scroll layer space */
-//                wall.position = self.convert(newPosition, to: scroll)
-//            }
-//        }
-//    }
-    
     func scrollRope(){
         rope1.position.y -= scrollSpeed * CGFloat(fixedDelta)
         rope2.position.y -= scrollSpeed * CGFloat(fixedDelta)
@@ -312,12 +288,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
 
     }
-//    func scrollWallsL(){
-//        leftWallTop.position.y -= scrollSpeed * CGFloat(fixedDelta)
-//        leftWallBottom.position.y -= scrollSpeed * CGFloat(fixedDelta)
-//        for node in self.children{
-//        }
-//    }
     
     func scrollWalls(){
         rightWallTop.position.y -= scrollSpeed * CGFloat(fixedDelta)
