@@ -14,7 +14,9 @@ enum GameSceneState {
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    var time: CFTimeInterval = 0
+    var time: Int = 0
+    var timing: CFTimeInterval = 0
+    
     let timerLabel = SKLabelNode(fontNamed: UIFont.boldSystemFont(ofSize: 16).fontName)
     let scrollSpeed: CGFloat = 100
     
@@ -74,8 +76,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //MARK: Update
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        time += fixedDelta
-        timerLabel.text = "Time: \(time)"
+//        timing += fixedDelta
+//        time += Int(timing/0.6)
+//        timerLabel.text = "Time: \(time)"
         
         for node in self.children{
             if node.name == "Rock"{
@@ -193,7 +196,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func startTimer(){
-        
+        timerLabel.run(SKAction.repeatForever(SKAction.sequence([
+            SKAction.run({
+                self.time += 1
+                self.timerLabel.text = "Time: \(self.time)"
+            }),
+             SKAction.wait(forDuration: 1)
+             ])))
     }
     
     func endTimer(){
