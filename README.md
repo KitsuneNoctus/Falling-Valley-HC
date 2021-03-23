@@ -46,5 +46,11 @@ When make a pull request, document the changes made following [this template](ht
 - [x] Score
 - [x] Scrolling screen
 - [x] UI For home screen and end game screen
-- [ ] Applying good sprites
+- [x] Applying good sprites
+
+## To Do's
+- [ ] Add GameCenter connection
+- [ ] Add a form of persistence and a score screen
+- [ ] Add more sounds
+- [ ] Modularize
 
