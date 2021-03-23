@@ -33,10 +33,14 @@ class CharacterViewController: UIViewController {
     }
     
     @IBAction func Character3Chosen(_ sender: UIButton) {
+        character = .climber3
+        homeViewController?.setCharacter(character: character)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func Character4Chosen(_ sender: UIButton) {
+        character = .climber4
+        homeViewController?.setCharacter(character: character)
         self.dismiss(animated: true, completion: nil)
     }
     

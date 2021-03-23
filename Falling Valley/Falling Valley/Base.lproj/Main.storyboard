@@ -153,57 +153,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iN-n8-NQp">
-                                <rect key="frame" x="187" y="427" width="40" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdY-Ne-qaZ">
+                                <rect key="frame" x="100" y="84" width="214" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iN-n8-NQp">
+                                <rect key="frame" x="100" y="780" width="214" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Exit"/>
                                 <connections>
                                     <action selector="exit:" destination="J1R-cl-32m" eventType="touchUpInside" id="JVW-jd-d9s"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdY-Ne-qaZ">
-                                <rect key="frame" x="113" y="79" width="188" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13W-Xt-Itq">
-                                <rect key="frame" x="291" y="198" width="19" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="square.and.arrow.up" catalog="system"/>
-                                <connections>
-                                    <action selector="Character2Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="RkT-3V-iph"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6O-cY-6rv">
-                                <rect key="frame" x="71" y="310" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="Character3Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="P6O-FK-8Tm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSV-5j-gXP">
-                                <rect key="frame" x="277" y="310" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="Character4Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="4S8-dx-Bgc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6A-jn-G4F">
-                                <rect key="frame" x="49" y="164" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="climberCharacter"/>
-                                <connections>
-                                    <action selector="Character1Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="bTq-Rc-S1s"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="KhF-XN-jJo">
+                                <rect key="frame" x="24" y="241.5" width="366.5" height="413.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cDx-VR-wq4">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="394"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6A-jn-G4F">
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="195"/>
+                                                <state key="normal" image="climberCharacter"/>
+                                                <connections>
+                                                    <action selector="Character1Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="bTq-Rc-S1s"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6O-cY-6rv">
+                                                <rect key="frame" x="0.0" y="199" width="180" height="195"/>
+                                                <state key="normal" image="militaryCharacter"/>
+                                                <connections>
+                                                    <action selector="Character3Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="P6O-FK-8Tm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tSQ-br-QS9">
+                                        <rect key="frame" x="224" y="0.0" width="142.5" height="413.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13W-Xt-Itq">
+                                                <rect key="frame" x="0.0" y="0.0" width="142.5" height="202.5"/>
+                                                <state key="normal" image="ninjaCharacter"/>
+                                                <connections>
+                                                    <action selector="Character2Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="RkT-3V-iph"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSV-5j-gXP">
+                                                <rect key="frame" x="0.0" y="218.5" width="142.5" height="195"/>
+                                                <state key="normal" image="alienCharacter"/>
+                                                <connections>
+                                                    <action selector="Character4Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="4S8-dx-Bgc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xh7-Q4-w2g"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="skyColor"/>
+                        <constraints>
+                            <constraint firstItem="pdY-Ne-qaZ" firstAttribute="top" secondItem="Xh7-Q4-w2g" secondAttribute="top" constant="40" id="029-b8-1bu"/>
+                            <constraint firstItem="KhF-XN-jJo" firstAttribute="centerY" secondItem="Ljf-9g-jVZ" secondAttribute="centerY" id="5Fg-fd-tqD"/>
+                            <constraint firstItem="Xh7-Q4-w2g" firstAttribute="bottom" secondItem="7iN-n8-NQp" secondAttribute="bottom" constant="40" id="BMO-Pm-Vw9"/>
+                            <constraint firstItem="KhF-XN-jJo" firstAttribute="centerX" secondItem="Ljf-9g-jVZ" secondAttribute="centerX" id="XGX-Qe-tlB"/>
+                            <constraint firstItem="Xh7-Q4-w2g" firstAttribute="trailing" secondItem="7iN-n8-NQp" secondAttribute="trailing" constant="100" id="haB-lr-0cu"/>
+                            <constraint firstItem="Xh7-Q4-w2g" firstAttribute="trailing" secondItem="pdY-Ne-qaZ" secondAttribute="trailing" constant="100" id="w83-Hd-QGF"/>
+                            <constraint firstItem="pdY-Ne-qaZ" firstAttribute="leading" secondItem="Xh7-Q4-w2g" secondAttribute="leading" constant="100" id="xUd-G7-dkC"/>
+                            <constraint firstItem="7iN-n8-NQp" firstAttribute="leading" secondItem="Xh7-Q4-w2g" secondAttribute="leading" constant="100" id="z13-Zo-hdE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUq-sz-U2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -258,10 +277,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alienCharacter" width="135" height="195"/>
         <image name="climberCharacter" width="180" height="195"/>
         <image name="leftWall" width="67.5" height="292.5"/>
+        <image name="militaryCharacter" width="142.5" height="195"/>
+        <image name="ninjaCharacter" width="142.5" height="202.5"/>
         <image name="rightWall" width="67.5" height="292.5"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="skyColor">
             <color red="0.63700002431869507" green="0.97399997711181641" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

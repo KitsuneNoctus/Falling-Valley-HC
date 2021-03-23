@@ -11,7 +11,7 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
-    var chosenCharacter: Characters = .climber1
+    var chosenCharacter: Characters!
 
     override func viewDidLoad() {
         super.viewDidLoad()

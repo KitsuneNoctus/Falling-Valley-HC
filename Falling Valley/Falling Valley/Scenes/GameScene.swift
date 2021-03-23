@@ -28,7 +28,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Items
     var player: Climber!
-    var chosenCharacter: Characters = .climber1
+    var chosenCharacter: Characters!
     
     var rope1: SKSpriteNode!
     var rope2: SKSpriteNode!

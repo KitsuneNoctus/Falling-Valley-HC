@@ -35,10 +35,6 @@ class HomeViewController: UIViewController {
         self.present(vc, animated: true)
     }
     
-//    func updateCharacter(character: Characters){
-//        chosenOne = character
-//    }
-    
     func setCharacter(character: Characters){
         chosenOne = character
     }
