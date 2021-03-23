@@ -276,6 +276,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let gameOverScene = GameOverScene(size: (self.view?.bounds.size)!)
         gameOverScene.scaleMode = .aspectFill
         gameOverScene.time = Int(time)/100
+        gameOverScene.character = chosenCharacter
         let crossFade = SKTransition.crossFade(withDuration: 0.75)
         view?.presentScene(gameOverScene, transition: crossFade)
     }

@@ -10,6 +10,8 @@ import SpriteKit
 
 class GameOverScene: SKScene {
     
+    var character: Characters!
+    
     let overLabel = SKLabelNode(fontNamed: UIFont.boldSystemFont(ofSize: 16).fontName)
     let timeLabel = SKLabelNode(fontNamed: UIFont.boldSystemFont(ofSize: 16).fontName)
     
@@ -68,21 +70,22 @@ class GameOverScene: SKScene {
         button.name = "button"
         self.addChild(button)
         
-        let exitbuttonTexture = SKTexture(imageNamed: "exitButton")
-        
-        let exitbutton = ButtonNode(normalTexture: exitbuttonTexture, selectedTexture: exitbuttonTexture, disabledTexture: exitbuttonTexture)
-        exitbutton.setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(GameOverScene.exit))
-        exitbutton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-150)
-        exitbutton.size.height = self.size.width/8
-        exitbutton.size.width = self.size.width/4
-        exitbutton.zPosition = 20
-        exitbutton.name = "exitButton"
-        self.addChild(exitbutton)
+//        let exitbuttonTexture = SKTexture(imageNamed: "exitButton")
+//        
+//        let exitbutton = ButtonNode(normalTexture: exitbuttonTexture, selectedTexture: exitbuttonTexture, disabledTexture: exitbuttonTexture)
+//        exitbutton.setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(GameOverScene.exit))
+//        exitbutton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-150)
+//        exitbutton.size.height = self.size.width/8
+//        exitbutton.size.width = self.size.width/4
+//        exitbutton.zPosition = 20
+//        exitbutton.name = "exitButton"
+//        self.addChild(exitbutton)
     }
     
     @objc func playAgain(){
         let gameScene = GameScene(size: (self.view?.bounds.size)!)
         gameScene.scaleMode = .aspectFill
+        gameScene.chosenCharacter = character
         let crossFade = SKTransition.crossFade(withDuration: 0.75)
         if let spriteview = self.view{
             spriteview.presentScene(gameScene, transition: crossFade)
