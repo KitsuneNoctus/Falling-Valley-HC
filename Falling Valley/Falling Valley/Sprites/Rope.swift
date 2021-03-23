@@ -14,6 +14,7 @@ class Rope: SKSpriteNode {
         let size = CGSize(width: 5, height: (scene.view?.bounds.height)!+100)
         super.init(texture: texture, color: .clear, size: size)
         self.name = "Rope"
+        self.zPosition = 1
         
         self.physicsBody = SKPhysicsBody(rectangleOf: size)
         self.physicsBody?.isDynamic = false

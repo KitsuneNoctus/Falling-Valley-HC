@@ -129,7 +129,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func spawnRocks(){
         var randomTime:Double = 5.0
         let generateTime = SKAction.run {
-            randomTime = Double.random(in: 1...5)
+            if (self.time/100) < 0{
+                randomTime = Double.random(in: 1...5)
+            }else if (self.time/100) > 60{
+                randomTime = Double.random(in: 1...3)
+            }else if (self.time/100) > 120{
+                randomTime = Double.random(in: 0...2)
+            }
         }
         let wait = SKAction.wait(forDuration: randomTime)
         let createObject = SKAction.run{
