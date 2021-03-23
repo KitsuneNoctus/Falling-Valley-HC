@@ -253,23 +253,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXc-bC-R2O">
-                                <rect key="frame" x="136" y="100" width="142" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXc-bC-R2O">
+                                <rect key="frame" x="100" y="84" width="214" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Theres nothing here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gb-Wh-sJ5">
-                                <rect key="frame" x="186" y="348" width="153" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theres nothing here...yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gb-Wh-sJ5">
+                                <rect key="frame" x="112.5" y="437.5" width="189.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LLJ-3N-0fU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="skyColor"/>
+                        <constraints>
+                            <constraint firstItem="2gb-Wh-sJ5" firstAttribute="centerX" secondItem="Mrp-Kt-ntv" secondAttribute="centerX" id="9dE-g0-yrn"/>
+                            <constraint firstItem="QXc-bC-R2O" firstAttribute="top" secondItem="LLJ-3N-0fU" secondAttribute="top" constant="40" id="AsB-HX-Tx3"/>
+                            <constraint firstItem="LLJ-3N-0fU" firstAttribute="trailing" secondItem="QXc-bC-R2O" secondAttribute="trailing" constant="100" id="QWF-eh-Hcs"/>
+                            <constraint firstItem="2gb-Wh-sJ5" firstAttribute="centerY" secondItem="Mrp-Kt-ntv" secondAttribute="centerY" id="VCm-Mm-10X"/>
+                            <constraint firstItem="QXc-bC-R2O" firstAttribute="leading" secondItem="LLJ-3N-0fU" secondAttribute="leading" constant="100" id="hzN-By-h1x"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gp-E0-RQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -289,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186" y="77"/>
+            <point key="canvasLocation" x="-329" y="93"/>
         </scene>
     </scenes>
     <resources>
