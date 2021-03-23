@@ -9,4 +9,5 @@ import Foundation
 
 enum Characters: String{
     case climber1 = "climberCharacter"
+    case climber2 = "ninjaCharacter"
 }

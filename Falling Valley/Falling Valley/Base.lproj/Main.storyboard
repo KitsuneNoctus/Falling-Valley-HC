@@ -158,6 +158,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Exit"/>
+                                <connections>
+                                    <action selector="exit:" destination="J1R-cl-32m" eventType="touchUpInside" id="JVW-jd-d9s"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdY-Ne-qaZ">
                                 <rect key="frame" x="113" y="79" width="188" height="48"/>
@@ -166,25 +169,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13W-Xt-Itq">
-                                <rect key="frame" x="277" y="194" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13W-Xt-Itq">
+                                <rect key="frame" x="291" y="198" width="19" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                <connections>
+                                    <action selector="Character2Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="RkT-3V-iph"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6O-cY-6rv">
                                 <rect key="frame" x="71" y="310" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Character3Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="P6O-FK-8Tm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSV-5j-gXP">
                                 <rect key="frame" x="277" y="310" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Character4Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="4S8-dx-Bgc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6A-jn-G4F">
                                 <rect key="frame" x="49" y="164" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="climberCharacter"/>
+                                <connections>
+                                    <action selector="Character1Chosen:" destination="J1R-cl-32m" eventType="touchUpInside" id="bTq-Rc-S1s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xh7-Q4-w2g"/>
@@ -246,6 +261,7 @@
         <image name="climberCharacter" width="180" height="195"/>
         <image name="leftWall" width="67.5" height="292.5"/>
         <image name="rightWall" width="67.5" height="292.5"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="skyColor">
             <color red="0.63700002431869507" green="0.97399997711181641" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
