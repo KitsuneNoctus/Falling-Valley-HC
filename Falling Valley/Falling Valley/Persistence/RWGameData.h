@@ -11,12 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RWGameData : NSObject
 
-@property (assign, nonatomic) long score;
-
-@property (assign, nonatomic) long highScore;
-
-+(instancetype)sharedGameData;
--(void)reset;
+//@property (assign, nonatomic) long score;
+//
+//@property (assign, nonatomic) long highScore;
+//
+//+(instancetype)sharedGameData;
+//-(void)reset;
 
 @end
 

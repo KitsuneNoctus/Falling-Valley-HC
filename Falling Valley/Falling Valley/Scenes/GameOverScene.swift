@@ -32,7 +32,7 @@ class GameOverScene: SKScene {
     override func didMove(to view: SKView) {
         self.backgroundColor = UIColor(named: "skyColor") ?? .blue
         setLabels()
-        createButton()
+        createButtons()
     }
     
     func setLabels(){
@@ -56,7 +56,7 @@ class GameOverScene: SKScene {
     }
     
     //MARK: Buttons
-    func createButton(){
+    func createButtons(){
         let buttonTexture = SKTexture(imageNamed: "playAgain")
         
         let button = ButtonNode(normalTexture: buttonTexture, selectedTexture: buttonTexture, disabledTexture: buttonTexture)
@@ -67,6 +67,17 @@ class GameOverScene: SKScene {
         button.zPosition = 20
         button.name = "button"
         self.addChild(button)
+        
+        let exitbuttonTexture = SKTexture(imageNamed: "exitButton")
+        
+        let exitbutton = ButtonNode(normalTexture: exitbuttonTexture, selectedTexture: exitbuttonTexture, disabledTexture: exitbuttonTexture)
+        exitbutton.setButtonAction(target: self, triggerEvent: .TouchUpInside, action: #selector(GameOverScene.exit))
+        exitbutton.position = CGPoint(x: self.frame.midX, y: self.frame.midY-150)
+        exitbutton.size.height = self.size.width/8
+        exitbutton.size.width = self.size.width/4
+        exitbutton.zPosition = 20
+        exitbutton.name = "exitButton"
+        self.addChild(exitbutton)
     }
     
     @objc func playAgain(){
@@ -76,5 +87,9 @@ class GameOverScene: SKScene {
         if let spriteview = self.view{
             spriteview.presentScene(gameScene, transition: crossFade)
         }
+    }
+    
+    @objc func exit(){
+        print("Does Nothing!")
     }
 }
