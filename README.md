@@ -55,3 +55,5 @@ When make a pull request, document the changes made following [this template](ht
 - [ ] Add more sounds
 - [ ] Modularize
 
+### License
+Distributed under the MIT License. See LICENSE for more information.
