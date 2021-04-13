@@ -21,7 +21,8 @@ Survive as long as you can! Falling Valley is an infinite scroller in which the 
     * As time goes on, the more frequently that rocks will fall
     
 #### Demo
-- Yet to be added -
+![game gif 1](Media/game-vid-1.gif)
+![game gif 2](Media/game-vid-2.gif)
 
 ### Technologies
 * SpriteKit
